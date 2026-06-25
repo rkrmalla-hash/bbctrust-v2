@@ -1,1 +1,1563 @@
 /* BBC Trust Premium Styles */
+/* =========================================
+   BBC Trust Premium Styles
+   Part 1 - Reset & Foundation
+========================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    font-size:16px;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f7fafc;
+
+    color:#1e293b;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+/* Root Variables */
+
+:root{
+
+    --primary:#0f766e;
+
+    --primary-dark:#115e59;
+
+    --secondary:#f59e0b;
+
+    --accent:#14b8a6;
+
+    --white:#ffffff;
+
+    --black:#111827;
+
+    --text:#334155;
+
+    --gray:#64748b;
+
+    --light:#f8fafc;
+
+    --border:#e2e8f0;
+
+    --shadow:0 20px 60px rgba(15,118,110,.10);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+    --max-width:1200px;
+
+}
+
+/* Base */
+
+body{
+
+    min-height:100vh;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:var(--transition);
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+input,
+textarea{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+/* Container */
+
+.container{
+
+    width:min(92%,var(--max-width));
+
+    margin:auto;
+
+}
+
+/* Sections */
+
+section{
+
+    padding:90px 0;
+
+    position:relative;
+
+}
+
+/* Headings */
+
+h1{
+
+    font-size:3.4rem;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+}
+
+h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:20px;
+
+    color:var(--black);
+
+}
+
+h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:12px;
+
+}
+
+p{
+
+    color:var(--text);
+
+    margin-bottom:16px;
+
+}
+
+/* Section Title */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+.section-title h2{
+
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    max-width:720px;
+
+    margin:auto;
+
+}
+
+/* Buttons */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+
+    color:#fff;
+
+    box-shadow:0 15px 35px rgba(15,118,110,.30);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 25px 50px rgba(15,118,110,.35);
+
+}
+
+.btn-outline{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    background:transparent;
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* Glass Card */
+
+.glass{
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* Utilities */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mb-4{
+
+    margin-bottom:40px;
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+.rounded{
+
+    border-radius:var(--radius);
+
+}
+
+/* =========================================
+   END OF PART 1
+========================================= */
+
+/* =========================================
+   PART 2 - HEADER • NAVBAR • HERO
+========================================= */
+
+/* Header */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    transition:.35s ease;
+
+}
+
+.header.scrolled{
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+/* Navbar */
+
+.navbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    height:82px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.logo img{
+
+    width:56px;
+
+    height:56px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:32px;
+
+}
+
+.nav-menu a{
+
+    font-weight:500;
+
+    color:var(--black);
+
+    position:relative;
+
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+.nav-menu a:hover::after,
+
+.nav-menu a.active::after{
+
+    width:100%;
+
+}
+
+.nav-btn{
+
+    margin-left:25px;
+
+}
+
+/* Mobile Toggle */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:1.8rem;
+
+    cursor:pointer;
+
+    color:var(--primary);
+
+}
+
+/* Progress Bar */
+
+.progress-bar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:4px;
+
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+
+    z-index:1200;
+
+}
+
+/* Hero */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(135deg,#ecfeff,#f8fafc);
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    border-radius:50%;
+
+    background:rgba(20,184,166,.12);
+
+    top:-180px;
+
+    right:-120px;
+
+    filter:blur(20px);
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(245,158,11,.10);
+
+    left:-120px;
+
+    bottom:-150px;
+
+}
+
+.hero-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.hero-content h1{
+
+    margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+    font-size:1.08rem;
+
+    max-width:620px;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* Hero Image */
+
+.hero-image{
+
+    position:relative;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    border-radius:30px;
+
+    box-shadow:0 35px 80px rgba(0,0,0,.18);
+
+}
+
+.hero-card{
+
+    position:absolute;
+
+    background:#fff;
+
+    padding:18px 24px;
+
+    border-radius:16px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+
+}
+
+.hero-card h4{
+
+    color:var(--primary);
+
+    margin-bottom:4px;
+
+}
+
+.hero-card.top{
+
+    top:25px;
+
+    left:-35px;
+
+}
+
+.hero-card.bottom{
+
+    right:-35px;
+
+    bottom:30px;
+
+}
+
+/* Floating Shapes */
+
+.shape{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    animation:floatShape 7s ease-in-out infinite;
+
+}
+
+.shape.one{
+
+    width:22px;
+
+    height:22px;
+
+    background:var(--secondary);
+
+    top:18%;
+
+    left:8%;
+
+}
+
+.shape.two{
+
+    width:14px;
+
+    height:14px;
+
+    background:var(--accent);
+
+    right:12%;
+
+    top:30%;
+
+}
+
+.shape.three{
+
+    width:26px;
+
+    height:26px;
+
+    background:var(--primary);
+
+    left:18%;
+
+    bottom:16%;
+
+}
+
+/* Loader */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.loader.hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.5s;
+
+}
+
+.loader-circle{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:6px solid #dbeafe;
+
+    border-top-color:var(--primary);
+
+    animation:spin 1s linear infinite;
+
+}
+
+/* Animations */
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes floatShape{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+/* =========================================
+   END OF PART 2
+========================================= */
+
+/* =========================================
+   PART 3
+   ABOUT • MISSION • VISION
+   CHAIRMAN • VICE PRESIDENT
+========================================= */
+
+/*---------------------------------------
+  About Section
+---------------------------------------*/
+
+.about-section{
+
+    background:#ffffff;
+
+    position:relative;
+
+}
+
+.about-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    position:relative;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:24px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.15);
+
+}
+
+.about-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+    background:linear-gradient(135deg,var(--secondary),var(--accent));
+
+    border-radius:24px;
+
+    right:-25px;
+
+    bottom:-25px;
+
+    z-index:-1;
+
+}
+
+.about-content h2{
+
+    margin-bottom:25px;
+
+}
+
+.about-content p{
+
+    margin-bottom:18px;
+
+    color:var(--text);
+
+}
+
+.about-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.about-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-feature i{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+
+    color:#fff;
+
+    font-size:22px;
+
+}
+
+/*---------------------------------------
+  Mission & Vision
+---------------------------------------*/
+
+.mission-section{
+
+    background:#f8fafc;
+
+}
+
+.mission-vision-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.mission-card{
+
+    background:#fff;
+
+    padding:40px 30px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+    transition:.4s;
+
+    border:1px solid transparent;
+
+}
+
+.mission-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:rgba(20,184,166,.20);
+
+}
+
+.mission-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+
+    margin-bottom:25px;
+
+}
+
+.mission-card h3{
+
+    margin-bottom:18px;
+
+}
+
+/*---------------------------------------
+  Chairman
+---------------------------------------*/
+
+.chairman-section{
+
+    background:#fff;
+
+}
+
+.chairman-wrapper{
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.chairman-image{
+
+    position:relative;
+
+}
+
+.chairman-image img{
+
+    width:100%;
+
+    border-radius:28px;
+
+    box-shadow:0 35px 80px rgba(0,0,0,.18);
+
+}
+
+.chairman-content blockquote{
+
+    margin:35px 0;
+
+    padding:25px;
+
+    border-left:5px solid var(--primary);
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    font-size:1.1rem;
+
+    font-style:italic;
+
+    color:var(--primary);
+
+}
+
+.chairman-sign{
+
+    margin-top:35px;
+
+}
+
+.chairman-sign h4{
+
+    color:var(--black);
+
+    margin-bottom:6px;
+
+}
+
+.chairman-sign span{
+
+    color:var(--gray);
+
+}
+
+/*---------------------------------------
+  Vice President
+---------------------------------------*/
+
+.vice-president-section{
+
+    background:#f8fafc;
+
+}
+
+.vice-president-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 420px;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.vice-president-image img{
+
+    width:100%;
+
+    border-radius:28px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.15);
+
+}
+
+.vice-president-content h2{
+
+    margin-bottom:25px;
+
+}
+
+.vice-president-content p{
+
+    margin-bottom:18px;
+
+}
+
+.vice-president-content .btn{
+
+    margin-top:18px;
+
+}
+
+/* Shared Image Hover */
+
+.about-image img,
+.chairman-image img,
+.vice-president-image img{
+
+    transition:.45s ease;
+
+}
+
+.about-image:hover img,
+.chairman-image:hover img,
+.vice-president-image:hover img{
+
+    transform:scale(1.03);
+
+}
+
+/* Section Subtitle */
+
+.section-subtitle{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+    position:relative;
+
+}
+
+.section-subtitle::after{
+
+    content:"";
+
+    width:60px;
+
+    height:3px;
+
+    background:var(--secondary);
+
+    display:block;
+
+    margin-top:8px;
+
+    border-radius:20px;
+
+}
+
+/* =========================================
+   END OF PART 3
+========================================= */
+/* =========================================
+   PART 4
+   TRUSTEES • PROGRAMS
+   IMPACT COUNTERS • TIMELINE
+========================================= */
+
+/*---------------------------------------
+  Trustees Section
+---------------------------------------*/
+
+.trustees-section{
+
+    background:#ffffff;
+
+    position:relative;
+
+}
+
+.trustees-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.trustee-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    border:1px solid #eef2f7;
+
+}
+
+.trustee-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.12);
+
+}
+
+.trustee-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.trustee-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.trustee-card h3{
+
+    margin-top:24px;
+
+    color:var(--black);
+
+}
+
+.trustee-card span{
+
+    display:block;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin:10px 0 25px;
+
+}
+
+/*---------------------------------------
+  Programs Section
+---------------------------------------*/
+
+.programs-section{
+
+    background:#f8fafc;
+
+}
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.program-card{
+
+    background:#fff;
+
+    padding:40px 35px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.program-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:5px;
+
+    height:100%;
+
+    background:linear-gradient(var(--primary),var(--accent));
+
+}
+
+.program-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.program-icon{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+.program-card h3{
+
+    margin-bottom:18px;
+
+}
+
+/*---------------------------------------
+  Impact Counter
+---------------------------------------*/
+
+.impact-section{
+
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+
+    color:#fff;
+
+    padding:90px 0;
+
+}
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.impact-box{
+
+    text-align:center;
+
+}
+
+.impact-box h2{
+
+    color:#fff;
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
+}
+
+.impact-box span{
+
+    font-size:1rem;
+
+    letter-spacing:1px;
+
+    opacity:.95;
+
+}
+
+/*---------------------------------------
+  Timeline
+---------------------------------------*/
+
+.timeline-section{
+
+    background:#fff;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    margin-top:70px;
+
+    padding-left:40px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:linear-gradient(var(--primary),var(--accent));
+
+    border-radius:10px;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:55px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-38px;
+
+    top:6px;
+
+    width:22px;
+
+    height:22px;
+
+    background:var(--secondary);
+
+    border:5px solid #fff;
+
+    border-radius:50%;
+
+    box-shadow:0 0 0 4px rgba(20,184,166,.15);
+
+}
+
+.timeline-year{
+
+    display:inline-block;
+
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+.timeline-content{
+
+    background:#fff;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.timeline-content h3{
+
+    color:var(--black);
+
+    margin-bottom:12px;
+
+}
+
+.timeline-content p{
+
+    margin:0;
+
+}
+
+/* Hover Effects */
+
+.program-card,
+.trustee-card,
+.timeline-content{
+
+    transition:all .35s ease;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateX(8px);
+
+}
+
+/* =========================================
+   END OF PART 4
+========================================= */
+
