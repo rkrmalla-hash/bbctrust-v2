@@ -1,1 +1,352 @@
+/* =========================================
+   BBC TRUST
+   ANIMATIONS.CSS
+========================================= */
 
+/* Fade Up */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* Fade Left */
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-60px);
+
+    transition:all .8s ease;
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* Fade Right */
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(60px);
+
+    transition:all .8s ease;
+
+}
+
+.fade-right.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* Zoom */
+
+.zoom{
+
+    opacity:0;
+
+    transform:scale(.85);
+
+    transition:all .8s ease;
+
+}
+
+.zoom.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* Rotate */
+
+.rotate{
+
+    opacity:0;
+
+    transform:rotate(-8deg);
+
+    transition:.8s ease;
+
+}
+
+.rotate.show{
+
+    opacity:1;
+
+    transform:rotate(0deg);
+
+}
+
+/* Float */
+
+.float{
+
+    animation:floatAnimation 4s ease-in-out infinite;
+
+}
+
+@keyframes floatAnimation{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+/* Pulse */
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* Hero Background */
+
+.hero::before{
+
+    animation:blobMove 12s ease-in-out infinite alternate;
+
+}
+
+@keyframes blobMove{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-60px,40px);
+
+    }
+
+}
+
+/* Button Hover */
+
+.btn{
+
+    transition:.35s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* Card Hover */
+
+.program-card,
+.trustee-card,
+.event-card,
+.testimonial-card,
+.mission-card{
+
+    transition:.35s ease;
+
+}
+
+.program-card:hover,
+.trustee-card:hover,
+.event-card:hover,
+.testimonial-card:hover,
+.mission-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* Gallery Hover */
+
+.gallery-item{
+
+    overflow:hidden;
+
+}
+
+.gallery-item img{
+
+    transition:.45s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* Social Icons */
+
+.social-icons a{
+
+    transition:.35s;
+
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-6px) rotate(8deg);
+
+}
+
+/* Back To Top */
+
+#backToTop{
+
+    transition:.35s;
+
+}
+
+#backToTop:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* Loader */
+
+.loader-circle{
+
+    animation:loaderSpin 1s linear infinite;
+
+}
+
+@keyframes loaderSpin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* Counter */
+
+.counter{
+
+    transition:1s ease;
+
+}
+
+/* Timeline */
+
+.timeline-item{
+
+    transition:.4s;
+
+}
+
+.timeline-item:hover{
+
+    transform:translateX(10px);
+
+}
+
+/* Navbar */
+
+.nav-menu a{
+
+    transition:.3s;
+
+}
+
+/* Image Hover */
+
+img{
+
+    transition:.4s;
+
+}
+
+/* Fade Delay */
+
+.delay-1{
+
+    transition-delay:.2s;
+
+}
+
+.delay-2{
+
+    transition-delay:.4s;
+
+}
+
+.delay-3{
+
+    transition-delay:.6s;
+
+}
+
+.delay-4{
+
+    transition-delay:.8s;
+
+}
+
+/* =========================================
+   ANIMATIONS COMPLETE
+========================================= */
