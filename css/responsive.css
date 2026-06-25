@@ -1,1 +1,539 @@
+/* =========================================
+   BBC TRUST
+   RESPONSIVE.CSS
+   PART 1
+========================================= */
 
+/* =========================================
+   Large Screens
+========================================= */
+
+@media (max-width:1400px){
+
+.container{
+
+    width:94%;
+
+}
+
+.hero-wrapper{
+
+    gap:50px;
+
+}
+
+}
+
+/* =========================================
+   Laptops
+========================================= */
+
+@media (max-width:1200px){
+
+h1{
+
+    font-size:3rem;
+
+}
+
+h2{
+
+    font-size:2.2rem;
+
+}
+
+.hero-wrapper{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    order:2;
+
+}
+
+.hero-image{
+
+    order:1;
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+.about-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+}
+
+.chairman-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.vice-president-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.donation-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+/* =========================================
+   Tablets
+========================================= */
+
+@media (max-width:992px){
+
+section{
+
+    padding:70px 0;
+
+}
+
+.nav-menu{
+
+    position:fixed;
+
+    top:82px;
+
+    right:-100%;
+
+    width:300px;
+
+    height:calc(100vh - 82px);
+
+    background:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:flex-start;
+
+    padding:40px 30px;
+
+    transition:.4s;
+
+    box-shadow:-5px 0 30px rgba(0,0,0,.08);
+
+}
+
+.nav-menu.active{
+
+    right:0;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.nav-btn{
+
+    display:none;
+
+}
+
+.mission-vision-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.program-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.trustees-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.events-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.impact-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* =========================================
+   END PART 1
+========================================= */
+
+/* =========================================
+   RESPONSIVE.CSS
+   PART 2
+   Mobile • Small Devices
+========================================= */
+
+/* =========================================
+   Mobile Devices
+========================================= */
+
+@media (max-width:768px){
+
+html{
+
+    font-size:15px;
+
+}
+
+section{
+
+    padding:60px 0;
+
+}
+
+.container{
+
+    width:92%;
+
+}
+
+h1{
+
+    font-size:2.4rem;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-size:2rem;
+
+}
+
+.hero{
+
+    min-height:auto;
+
+    padding:120px 0 70px;
+
+}
+
+.hero-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    text-align:center;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-card{
+
+    display:none;
+
+}
+
+.about-wrapper,
+
+.chairman-wrapper,
+
+.vice-president-wrapper,
+
+.donation-wrapper,
+
+.contact-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.about-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.program-grid,
+
+.gallery-grid,
+
+.events-grid,
+
+.testimonial-slider,
+
+.trustees-grid,
+
+.impact-grid,
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.mission-vision-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.timeline{
+
+    padding-left:25px;
+
+}
+
+.timeline::before{
+
+    left:8px;
+
+}
+
+.timeline-item::before{
+
+    left:-28px;
+
+}
+
+.contact-form{
+
+    padding:25px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.nav-menu{
+
+    width:100%;
+
+}
+
+}
+
+/* =========================================
+   Small Phones
+========================================= */
+
+@media (max-width:576px){
+
+html{
+
+    font-size:14px;
+
+}
+
+.logo{
+
+    font-size:1.1rem;
+
+}
+
+.logo img{
+
+    width:46px;
+
+    height:46px;
+
+}
+
+.navbar{
+
+    height:72px;
+
+}
+
+.hero{
+
+    padding-top:100px;
+
+}
+
+.section-title{
+
+    margin-bottom:45px;
+
+}
+
+.hero-image img,
+
+.about-image img,
+
+.chairman-image img,
+
+.vice-president-image img{
+
+    border-radius:18px;
+
+}
+
+.program-card,
+
+.mission-card,
+
+.testimonial-card,
+
+.contact-form{
+
+    padding:22px;
+
+}
+
+.gallery-item img{
+
+    height:220px;
+
+}
+
+.event-card img{
+
+    height:200px;
+
+}
+
+.footer{
+
+    text-align:center;
+
+}
+
+.social-icons{
+
+    justify-content:center;
+
+}
+
+#backToTop{
+
+    right:18px;
+
+    bottom:18px;
+
+    width:48px;
+
+    height:48px;
+
+}
+
+}
+
+/* =========================================
+   Extra Small Devices
+========================================= */
+
+@media (max-width:400px){
+
+h1{
+
+    font-size:2rem;
+
+}
+
+h2{
+
+    font-size:1.6rem;
+
+}
+
+.btn{
+
+    padding:14px 20px;
+
+    font-size:.95rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.contact-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.contact-card i{
+
+    margin:auto;
+
+}
+
+.timeline-content{
+
+    padding:20px;
+
+}
+
+}
+
+/* =========================================
+   RESPONSIVE.CSS COMPLETE
+========================================= */
